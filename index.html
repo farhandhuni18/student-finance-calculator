@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Finance Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">OPEN-SOURCE STUDENT TOOL</p>
+      <h1>Student Finance Calculator</h1>
+      <p>Plan a monthly student budget and see where your money goes.</p>
+    </header>
+    <section class="panel">
+      <h2>Monthly income</h2>
+      <label for="income">Total income (PKR)</label>
+      <input id="income" type="number" min="0" placeholder="e.g. 25000">
+    </section>
+    <section class="panel">
+      <h2>Monthly expenses</h2>
+      <div class="fields">
+        <label>Food <input id="food" type="number" min="0" value="0"></label>
+        <label>Transport <input id="transport" type="number" min="0" value="0"></label>
+        <label>Study <input id="study" type="number" min="0" value="0"></label>
+        <label>Accommodation <input id="accommodation" type="number" min="0" value="0"></label>
+        <label>Other <input id="other" type="number" min="0" value="0"></label>
+      </div>
+      <button id="calculate">Calculate budget</button>
+    </section>
+    <section class="results panel" aria-live="polite">
+      <h2>Your monthly summary</h2>
+      <div class="result"><span>Total expenses</span><strong id="expenses">PKR 0</strong></div>
+      <div class="result"><span>Remaining balance</span><strong id="balance">PKR 0</strong></div>
+      <p id="message">Enter your income and expenses, then calculate.</p>
+    </section>
+    <footer>Free to use and modify. Built for student financial literacy.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
